@@ -1,0 +1,164 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>
+
+
+<div style="max-width:1200px;margin:0 auto;height:100px;">
+  <div style="float:left;">
+    <a><img style="width:80px;font-family:微软雅黑;height:80px;margin-top:12px" src="images/logo_VP.png"></a>
+  </div>
+  <div style="float:left;font-size:25px;font-weight:500;color:#008AFF;margin-top:46px;">
+    企业级管理平台
+  </div>
+</div>
+<!-- carousel -->
+<div class="panel b-a" set-ng-animate="false" style="margin-bottom: 0px;border-bottom-width: 0px;">
+  <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+      <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: slide in slides --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="img/c0.jpg" class="img-full ng-scope" src="bower_components//c0.jpg">
+    </div><!-- end ngRepeat: slide in slides --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="img/c1.jpg" class="img-full ng-scope" src="bower_components//c1.jpg">
+    </div><!-- end ngRepeat: slide in slides --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="img/c2.jpg" class="img-full ng-scope" src="bower_components//c2.jpg">
+    </div><!-- end ngRepeat: slide in slides --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="img/c3.jpg" class="img-full ng-scope" src="bower_components//c3.jpg">
+    </div><!-- end ngRepeat: slide in slides --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="img/c4.jpg" class="img-full ng-scope" src="bower_components//c4.jpg">
+    </div><!-- end ngRepeat: slide in slides -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  </div>
+</div>
+<!-- / carousel -->
+
+<!-- <div class="picShowHelp"><img style="border:3px solid gold;" height="400px" width="250px" src="../../img/vpSaoQrHelp.png"></div> -->
+
+<div style="width: 450px;margin: 0 auto;position: absolute;top:170px;left: 58%;">
+  <div class="login-box-plain" ng-init="isqrcode=false" style="margin: 20px auto;padding: 10px 40px 10px;border-radius: 0px;position: relative;">
+    <a href="javascript:void(0);" ng-click="changeMode();isqrcode=!isqrcode;test()" class="qrcode_target" ng-class="{qrcode_pc:isqrcode==true}" style="z-index:999;"></a>
+
+    <div class="flip" id="flip">
+      <div class="front" style="padding-right:50px;">
+        <h2 style="font-family: 微软雅黑;color: #fff; font-size: 30px;line-height: 1;" class="bigintro">
+          用户登录</h2>
+
+        <div class="divide-40"></div>
+        <form role="form" name="form" class="form-horizontal ng-pristine ng-valid-email ng-invalid ng-invalid-required">
+
+          <div class="form-group">
+            <label class="col-md-2 control-label text-label login-padding text-offset-right">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</label>
+
+            <div class="col-md-9 ctrl-magin-left">
+              <i class="fa fa-envelope"></i>
+              <input class="form-control pad0 login-radius ng-pristine ng-untouched ng-valid ng-valid-email ng-valid-required" placeholder="Email" ng-model="LoginId" required="" value="yangdong@csii.com.cn" type="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label text-label login-padding text-offset-right">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+
+            <div class="col-md-9 ctrl-magin-left">
+              <i class="fa fa-lock"></i>
+              <input placeholder="Password" class="form-control pad0 login-radius ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-model="PassWord" required="" type="password">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label text-label login-padding text-offset-right"></label>
+
+            <div class="col-md-9 ctrl-magin-left">
+              <button type="submit" ui-timebtn="" time="3" class="btn btn-info col-md-5 login-radius" style="background-color: #9999FF;border-color: #23B7E5;" ng-click="login()" ng-disabled="form.$invalid" disabled="disabled">
+                                            <span class="text-center">
+                                            <i class="glyphicon glyphicon-user" style="color: #ffffff;"></i>
+                                            <span style="font-weight: bold;">&nbsp;登&nbsp;录</span>
+                                            </span>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <a class="col-md-3  text-label login-padding text-offset-right href-css" style="font-size: 16px;" onclick="javascript:window.location.href='../forgetpwd/index.html';">忘记密码?</a>
+          </div>
+        </form>
+        <!-- SOCIAL LOGIN -->
+        <div class="divide-20">
+          <div style="height:15px;" class="visible-md visible-lg"></div>
+          <div class="text-danger text-center ng-binding ng-hide" ng-show="authError">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="back">
+        <h2 style="font-family: 微软雅黑;color: #fff; font-size: 30px;line-height: 1;" class="bigintro">
+          扫码登录</h2>
+
+        <div class="divide-20"></div>
+        <div class="divide-20 hidden-md hidden-lg"></div>
+        <div id="qrcode_app" class="text-center"></div>
+        <div class="text-center text-white">二维码有效计时:<span style="color:red;font-size: 18px" class="ng-binding">&nbsp;&nbsp;</span>秒
+        </div>
+        <div class="divide-10"></div>
+        <div class="text-center">请您使用VP+手机客户端扫码</div>
+        <div class="divide-10"></div>
+        <div class="divide-20"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mid">
+  <div style="position:absolute;font-size: 17px;font-weight: bold;text-shadow: 1px 1px 0 #000;left: 62%;top:460px;color:#2126f3;font-family: cursive;">请大家进入公告，下载工作会议大合唱精彩视频。</div>
+</div>
+<ng-tip><div class="alert alert-vpInfo ngTip ng-hide off" ng-show="ngTip.msgFlag" ng-click="hideAlert()" ng-class="{true:'on',false:'off'}[ngTip.msgFlag!=null]" style=""><button type="button" class="close" ng-click="hideAlert()"><span class=""></span></button>尊敬的用户您好，建议使用Chrome、Safari浏览器进行访问，最优推荐使用Chrome浏览器(方便打印和导出PDF)。如有问题请发送邮件到&lt;support@csii.com.cn&gt;进行反馈。</div></ng-tip>
